@@ -24,6 +24,7 @@ Work experience
 Skills
 ======
 * Probability theory
+* Stochastic modeling
 * Deep Learning
 
 
