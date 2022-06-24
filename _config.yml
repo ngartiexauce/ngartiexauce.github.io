@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Exaucé NGARTI / Page personnelle"
+title                    : "Exaucé LUWEH ADJIM NGARTI / Machine Learning Intern Researcher "
 title_separator          : "-"
-name                     : &name "Ngarti"
-description              : &description "This my personal page"
+name                     : &name " LUWEH ADJIM NGARTI"
+description              : &description "This is my personal page"
 url                      : https://exaucengarti.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "exaucengarti/exaucengarti.github.io"
