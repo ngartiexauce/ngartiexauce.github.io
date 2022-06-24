@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* B.S. Mathematics and Computer Science, University of Bordeaux, 200
+* B.S. Mathematics and Computer Science, University of Bordeaux, 2020
 * M.S. Statistics and Computer Engineering, University of Bordeaux, 2022
 
 Work experience
