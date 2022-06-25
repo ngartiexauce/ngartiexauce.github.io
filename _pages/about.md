@@ -30,7 +30,7 @@ My research interests are (but not limited to)
 
 Relevant links
 ---
-* [Professional Resume]([https://ngartiexauce.github.io/files/Exauce_cv.pdf])
+* [Professional Resume]([https://github.com/ngartiexauce/ngartiexauce.github.io/blob/master/files/Exauce_cv.pdf])
 
 
 
