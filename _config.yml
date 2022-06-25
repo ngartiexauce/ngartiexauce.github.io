@@ -78,19 +78,44 @@ analytics:
     tracking_id          :
 
 
+
 # Site Author
 author:
-  name             : "Exauce LUWEH ADJIM NGARTI"
+  name             : "Your Sidebar Name"
   avatar           : "profile.png"
-  bio              : "Marchine learning research intern"
-  location         : "Grenoble/France"
-  employer         : "Atos/Inria
+  bio              : "Your biography for the left-hand sidebar"
+  location         : "Location"
+  employer         :
+  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            : "exauce.ngarti@atos.net"
-  researchgate     : "https://www.researchgate.net/profile/Exauce-Luweh-Adjim-Ngarti"
-  github           : "ngartiexauce"
-  linkedin         : "https://www.linkedin.com/in/ngartiexauce"
-  stackoverflow    : "http://stackoverflow.com/users/123456/ngartiexauce"
+  email            :
+  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "academicpages"
+  google_plus      :
+  keybase          :
+  instagram        :
+  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  lastfm           :
+  linkedin         :
+  orcid            : "http://orcid.org/yourorcidurl"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  steam            :
+  tumblr           :
+  twitter          : "replacethistwitterhandle"
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+  wikipedia        :
 
 
 # Reading Files
