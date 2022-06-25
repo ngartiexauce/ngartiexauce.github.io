@@ -31,4 +31,4 @@ Skills
   
 Service and leadership
 ======
-* In charge of pedagogical affairs for Chadian students in Bordeaux
+* In charge of pedagogical affairs for Chadian students in Bordeaux (2020-2021)
