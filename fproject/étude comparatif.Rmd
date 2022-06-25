@@ -1,0 +1,191 @@
+---
+title: "Étude comparative des championnats"
+author: "Luweh Adjim Ngarti Exaucé & Laamoumri Yassine"
+date: "01/02/2022"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+
+
+```{r warning=FALSE , include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r include=FALSE,warning=FALSE}
+library(tidyverse)
+library(esquisse)
+library(plotly)
+library(rmarkdown)
+library(SignifReg)
+library(caret)
+library(stats)
+library(reshape2)
+library(esquisse)
+library(C50)
+library(glmnet)
+library(pls)
+library(spls)
+library(gridExtra)
+require(gtools)
+library(CombMSC)
+select <- dplyr::select
+
+```
+```{r warning=FALSE ,include=FALSE}
+data <- read_csv('Data/understat.com.csv')
+data <- data %>% rename(league = ...1,year = ...2) %>% filter(year==2019,league!="RFPL") %>% select(-"year")
+
+data_players <- read_delim('Data/transfermarkt_fbref_201819.csv', delim=";",locale = locale(encoding = "UTF-8")) %>% filter(league!="RFPL")
+
+data_games <- read_csv('Data/understat_per_game.csv') %>% filter(year==2019,league!="RFPL") %>% select(-"year")
+```
+
+Dans cette partie nous allons comparer les 4 championnats pour voir si les études faites sur le championnat espagnol reste toujours valide dans d'autres championnats.
+ 
+```{r warning=FALSE}
+
+nombre <- data %>% 
+  group_by(league) %>%
+  summarise(n=n()) %>% 
+  ggplot() +
+  aes(x = league, fill = league, weight = n,horizontal=T) +
+  geom_bar() + 
+  scale_fill_brewer(palette = "Set1")
+  labs(
+    x = "Championats",
+    y = "Nombre d'équipes",
+    title = "Nombre d'équipes par championat"
+  ) +
+  theme_minimal()
+ggplotly(nombre)
+```
+Tous les championnats n'ont pas le même nombre d'équipe donc dans la suite, nous allons comparer que les valeurs moyennes.
+```{r message=FALSE,warning=FALSE}
+data_mean <- data%>%
+  group_by(league) %>%
+  summarise_at(colnames(data[,-c(1,2,3)]), list(mean = mean))
+```
+
+```{r}
+data_mean_m <- data_mean %>% melt(id.var="league")
+paged_table(data_mean_m)
+```
+```{r}
+g_legend<-function(a.gplot){
+  tmp <- ggplot_gtable(ggplot_build(a.gplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  return(legend)}
+
+reset_theme <- function(x){
+  return( x + theme(legend.position="none") )
+}
+```
+
+```{r}
+
+plot1 <- data_mean_m %>% filter(variable %in% c("matches_mean","wins_mean","draws_mean","loses_mean")) %>% ggplot( aes(variable, value, fill = league)) + 
+  geom_bar(stat="identity", position = "dodge") + 
+  scale_fill_brewer(palette = "Set1")
+
+ggplotly(plot1)
+```
+
+
+```{r}
+
+plot1 <- data_mean_m %>% filter(variable == "scored_mean") %>% ggplot( aes(variable, value, fill = league)) + 
+  geom_bar(stat="identity", position = "dodge") + 
+  scale_fill_brewer(palette = "Set1")
+
+ggplotly(plot1)
+```
+```{r}
+
+plot1 <- data_mean_m %>% filter(variable %in% c("xG_diff_mean")) %>% ggplot( aes(variable, value, fill = league)) + 
+  geom_bar(stat="identity", position = "dodge") + 
+  scale_fill_brewer(palette = "Set1")
+
+ggplotly(plot1)
+```
+Ce graphique confirme qu'en moyenne il y a moins de buts dans le championnat anglais et espagnol qu'il ne devrait.
+
+On peut dire que les différents championnats se démarquent les uns des autres. Dans le championnat allemand les buts marqués dépassent les buts attendus car les joueurs jouant dans ce championnat sont reconnus pour leurs frappes lointaines.
+
+
+```{r}
+plot1 <- data_mean_m %>% filter(variable %in% c("deep_mean")) %>% ggplot( aes(variable, value, fill = league)) + 
+  geom_bar(stat="identity", position = "dodge") + 
+  scale_fill_brewer(palette = "Set1")
+
+ggplotly(plot1)
+```
+```{r}
+plot1 <- data_mean_m %>% filter(variable %in% c("ppda_coef_mean")) %>% ggplot( aes(variable, value, fill = league)) + 
+  geom_bar(stat="identity", position = "dodge") + 
+  scale_fill_brewer(palette = "Set1")
+
+ggplotly(plot1)
+```
+Il n'y a pas une grosse différence concernant l'âge et la variation de temps de jeu.
+
+
+```{r warning=FALSE,include=FALSE}
+colnames(data_players)
+```
+
+```{r}
+data_players <- data_players %>% 
+  select(c("league","age","minutes","height","value")) %>%
+  drop_na() %>% 
+  group_by(league) %>% 
+  mutate(age=mean(age),height=mean(height),minutes=sqrt(var(minutes)),value=mean(value)) %>% 
+  distinct() %>% arrange(league)
+
+paged_table(data_players)
+```
+
+```{r}
+data_players_m <- data_players %>% melt(id.var="league")
+paged_table(data_players_m)
+```
+
+
+```{r}
+plot1 <- data_players_m %>% filter(variable=="age") %>% ggplot( aes(variable, value, fill = league)) + 
+  geom_bar(stat="identity", position = "dodge") + 
+  scale_fill_brewer(palette = "Set1")
+
+ggplotly(plot1)
+```
+
+
+```{r}
+plot1 <- data_players_m %>% filter(variable=="minutes") %>% ggplot( aes(variable, value, fill = league)) + 
+  geom_bar(stat="identity", position = "dodge") + 
+  scale_fill_brewer(palette = "Set1")
+
+ggplotly(plot1)
+```
+
+
+```{r}
+plot1 <- data_players_m %>% filter(variable=="height") %>% ggplot( aes(variable, value, fill = league)) + 
+  geom_bar(stat="identity", position = "dodge") + 
+  scale_fill_brewer(palette = "Set1")
+
+ggplotly(plot1)
+```
+
+
+```{r}
+plot1 <- data_players_m %>% filter(variable=="value") %>% ggplot( aes(variable, value, fill = league)) + 
+  geom_bar(stat="identity", position = "dodge") + 
+  scale_fill_brewer(palette = "Set1")
+
+ggplotly(plot1)
+```
+
+
