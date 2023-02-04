@@ -17,10 +17,8 @@ Education
 
 Work experience
 ======
-* January 2023 - Current: PHD Student Machine Learning 
-  * Atos/Inria 
-* March 2022 - August 2022: Machine Learning Intern Researcher 
-  * Atos/Inria
+* January 2023 - Current: PHD Student Machine Learning (Atosa and Inria)
+* March 2022 - August 2022: Machine Learning Intern Researcher (Atos and Inria)
  
 
   
