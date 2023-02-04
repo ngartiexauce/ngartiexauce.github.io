@@ -13,9 +13,12 @@ Education
 ======
 * B.S. Mathematics and Computer Science, University of Bordeaux, 2020
 * M.S. Statistics and Computer Engineering, University of Bordeaux, 2022
+* PHD Student Machine Learning, University of Grenoble Alpes, January 2023 - Current
 
 Work experience
 ======
+* January 2023 - Current: PHD Student Machine Learning 
+  * Atos/Inria 
 * March 2022 - August 2022: Machine Learning Intern Researcher 
   * Atos/Inria
  
