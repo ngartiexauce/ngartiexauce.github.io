@@ -13,7 +13,7 @@ Welcome on my personal page!
 
 Who am I ?
 ---
-I am a PhD Student in Machine Learning in the joint
+I am a PHD Student in Machine Learning in the joint
 laboratory between AI4Sim ([Github public
 repo](https://github.com/AI4SIM), which is part of Atos R&D
 department, and [AIRSEA](https://team.inria.fr/airsea/en/) (Inria
