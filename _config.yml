@@ -81,14 +81,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Exauce Luweh Adjim Ngarti"
+  name             : "Exaucé Luweh Adjim Ngarti"
   avatar           : "profile.jpg"
   bio              : "Machine learning PHD Student"
   location         : "Grenoble, FRANCE"
-  employer         : "Eviden, ex Bull/Atos/Inria"
+  employer         : "Eviden, ex Bull-Atos/Inria"
   pubmed           : 
   googlescholar    : 
-  email            :  "exaucen.garti@atos.net"
+  email            :  "exaucen.ngarti@eviden.com"
   researchgate     :  #"https://www.researchgate.net/profile/Exauce-Luweh-Adjim-Ngarti"
   uri              :
   bitbucket        :
