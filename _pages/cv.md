@@ -13,7 +13,7 @@ Education
 ======
 * B.S. Mathematics and Computer Science, University of Bordeaux, 2020
 * M.S. Statistics and Computer Engineering, University of Bordeaux, 2022
-* PHD Student Machine Learning, University of Grenoble Alpes, January 2023 - Current
+* PHD Student Machine Learning, University of Grenoble Alpes, March 2023 - Current
 
 Work experience
 ======
