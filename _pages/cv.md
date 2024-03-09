@@ -11,25 +11,28 @@ redirect_from:
 
 Education
 ======
-* B.S. Mathematics and Computer Science, University of Bordeaux, 2020
-* M.S. Statistics and Computer Engineering, University of Bordeaux, 2022
-* PHD Student Machine Learning, University of Grenoble Alpes, March 2023 - Current
+* B.S. Mathematics, Applied Mathematics and Social Sciences or Computer Science, University of Bordeaux, 2020
+* M.S. Applied Mathematics & Statistics, Specialization in Statistical & Stochastic Modeling, University of Bordeaux, 2022
+* PHD. Applied Mathematics, Deep Learning Techniques for Physics-Based Numerical Simulations, University of Grenoble Alpes, March 2023 - March 2026
 
 Work experience
 ======
-* January 2023 - Current: PHD Student Machine Learning (Atosa and Inria)
+* January 2023 - Current: PHD Student Machine Learning (Eviden and Inria)
 * March 2022 - August 2022: Machine Learning Intern Researcher (Atos and Inria)
  
 
   
 Skills
 ======
+* Deep Learning
 * Probability theory
 * Stochastic modeling
-* Deep Learning
+
 
 
   
 Service and leadership
 ======
+* Mathematics Teaching Assistant, University of Grenoble Alps (2023-2024)
+* Mathematics Tutor, University of Bordeaux2 (2020 - 2021)
 * In charge of pedagogical affairs for Chadian students in Bordeaux (2020-2021)
