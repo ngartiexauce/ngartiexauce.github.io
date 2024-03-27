@@ -34,5 +34,5 @@ Skills
 Service and leadership
 ======
 * Mathematics Teaching Assistant, University of Grenoble Alps (2023-2024)
-* Mathematics Tutor, University of Bordeaux2 (2020 - 2021)
+* Mathematics Tutor, University of Bordeaux (2020 - 2021)
 * In charge of pedagogical affairs for Chadian students in Bordeaux (2020-2021)
