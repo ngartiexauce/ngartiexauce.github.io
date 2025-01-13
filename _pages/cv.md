@@ -13,7 +13,7 @@ Education
 ======
 * B.S. Mathematics, Applied Mathematics and Social Sciences or Computer Science, University of Bordeaux, 2020
 * M.S. Applied Mathematics & Statistics, Specialization in Statistical & Stochastic Modeling, University of Bordeaux, 2022
-* PHD. Applied Mathematics, Deep Learning Techniques for Physics-Based Numerical Simulations, University of Grenoble Alpes, March 2023 - March 2026
+* PhD. Applied Mathematics, Deep Learning Techniques for Physics-Based Numerical Simulations, University of Grenoble Alpes, March 2023 - March 2026
 
 Work experience
 ======
