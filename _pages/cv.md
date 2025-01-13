@@ -17,7 +17,7 @@ Education
 
 Work experience
 ======
-* January 2023 - Current: PHD Student Machine Learning (Eviden and Inria)
+* January 2023 - Current: PhD Student Machine Learning (Eviden and Inria)
 * March 2022 - August 2022: Machine Learning Intern Researcher (Atos and Inria)
  
 
